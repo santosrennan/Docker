@@ -1,0 +1,32 @@
+comando docker
+
+docker run -p 8080:8080 -d teste2
+
+docker pull teste2
+
+docker stop $(docker ps -a -q)
+
+docker images
+
+docker build -f Dockerfile -t teste2 .
+
+
+cd /C
+
+ls
+
+docker-machine ls
+
+
+Passo a passo
+ 1- Entre no diretorio onde ta a pasta e os arquivos do Dockerfile ex:cd/C/Dockerfile
+
+2 - verifique se todos as portas estao livres docker stop $(docker ps -a -q)
+
+3- verifique seu ip docker-machine ls
+
+4- der o run 
+docker run -p 8080:8080 -d teste2
+
+
+OBS NÃO RODARÁ O MICROSERVIÇO COMO DEVERIA...TOMCAT CONFIGURADO PARA 8080... DOCKER FAIL
